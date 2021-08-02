@@ -1,0 +1,26 @@
+<nav class="navbar">
+  <h1>
+    <a [routerLink]="['/']">Trampoline    8 916 840 29 27</a>
+  </h1>
+  <ul>
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+      <a [routerLink]="['/']">Главная</a>
+    </li>
+    <li routerLinkActive="active"><a routerLink="/posts">Почему выбирают нас</a></li>
+    <li routerLinkActive="active"><a [routerLink]="['/about O nas.']">Цены и акции</a></li>
+    <li class="active"><a a href="#">Личный кабинет</a></li>
+
+<!--    <li><button class="btn">Login</button></li>-->
+<!--    <li><button class="btn">Logout</button></li>-->
+  </ul>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <router-outlet></router-outlet>
+    <br>
+<!--    <img src="{{img}}" alt="">-->
+  </div>
+</div>
+
+
