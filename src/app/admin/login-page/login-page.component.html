@@ -10,9 +10,8 @@
     {{message}}
   </div>
 
-
   <div class= "form-control"
-      [ngClass]="{invalid: form!.get('email')!.touched && form.get('email').invalid}"
+       [ngClass]="{invalid: form!.get('email')!.touched && form.get('email').invalid}"
   >
     <label for = "email"> email </label>
     <input id = "email" type="email" formControlName="email">
@@ -22,6 +21,7 @@
       <small *ngIf="form.get('email').errors.email"> введите корректный email</small>
     </div>
   </div>
+
   <div class="form-control"
        [ngClass]="{invalid: form.get('password').touched && form.get('password').invalid}"
        >

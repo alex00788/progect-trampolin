@@ -5,6 +5,6 @@ import {HttpClientModule} from '@angular/common/http';
     imports: [HttpClientModule],
     exports: [HttpClientModule]
 })
-export class SharedModule{
+export class SharedModule {
 
 }
