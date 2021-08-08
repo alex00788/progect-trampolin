@@ -1,11 +1,11 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Observable, Subject, throwError} from 'rxjs';
-import {environment} from '../../../../environments/environment';
+import {environment} from '../../../../../environments/environment';
 import {catchError, tap} from 'rxjs/operators';
-import {FbAuthRespons, User} from '../interfaces';
+import {FbAuthRespons, User} from '../../interfaces';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 export class AuthService {
     public error$: Subject<string> = new Subject<string>()
     constructor(private http: HttpClient) {
