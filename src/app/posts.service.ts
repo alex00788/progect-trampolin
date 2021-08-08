@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core'
 
 export interface Post {
+    date?: any;
     title: string
     text: string
     id: number
