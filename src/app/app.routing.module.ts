@@ -1,10 +1,10 @@
 import {NgModule} from '@angular/core';
 import {PreloadAllModules, RouterModule, Routes} from '@angular/router';
 import {HomeComponent} from './home/home.component';
-import {AboutComponent} from './about-O-nas/about.component';
+import {AboutComponent} from './price/about.component';
 import {PostsComponent} from './posts/posts.component';
 import {PostComponent} from './post/post.component';
-import {AboutExtraComponent} from './about-extra/about-extra.component';
+import {AboutExtraComponent} from './price-extra/about-extra.component';
 import {ArrorComponent} from './arror/arror.component';
 
 //http://localhost:4200/  -> HomeComponent
@@ -15,7 +15,7 @@ import {ArrorComponent} from './arror/arror.component';
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
-    {path: 'about-O-nas', component: AboutComponent, children: [
+    {path: 'price', component: AboutComponent, children: [
             {path: 'extra', component: AboutExtraComponent}
         ]},
     {path: 'posts', component: PostsComponent},
