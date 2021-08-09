@@ -5,31 +5,31 @@
         [queryParams]="{showIds: true}"
         fragment="fragment"
 >
-  Show Ids
+    Show Ids
 </button>
-<button class="btn" (click)="showIdsProgram()">
-  Show Ids (program)
-</button>
+<!--<button class="btn" (click)="showIdsProgram()">-->
+<!--  Show Ids (program)-->
+<!--</button>-->
 
 <div class="card" *ngFor="let post of postsService.posts">
-  <h4>
-    <a [routerLink]="['/posts', post.id]" >
-      <strong *ngIf="showIds">(ID {{post.id}})</strong>
-      {{post.title}}
-    </a>
-  </h4>
+    <h4>
+        <a [routerLink]="['/posts', post.id]">
+            <strong *ngIf="showIds">(ID {{post.id}})</strong>
+            {{post.title}}
+        </a>
+    </h4>
 </div>
 
-<h1>  О нас! </h1>
+<h1> Про нас! </h1>
 
 <p> Весело провести время в душевной компании, легко !</p> <br>
 
-<p>    С нами ты сможешь все и даже немного больше!</p> <br>
+<p> С нами ты сможешь все и даже немного больше!</p> <br>
 
-<p>    Сальто уже на 1й тренировке !</p>  <br>
+<p> Сальто уже на 1й тренировке !</p>  <br>
 
-<p>    Стойка на 1й руке, горизонт, шпагат!</p> <br>
+<p> Стойка на 1й руке, горизонт, шпагат!</p> <br>
 
-<p>    Можно долго слушать советы... а можно прийти попробовать и решить для себя!</p> <br>
+<p> Можно долго слушать советы... а можно прийти попробовать и решить для себя!</p> <br>
 
-<p>  8 916 840 29 27  звони и записывайся!</p> <br> <br>
+<p> 8 916 840 29 27 звони и записывайся!</p> <br> <br>

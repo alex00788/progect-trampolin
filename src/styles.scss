@@ -5,6 +5,9 @@
   margin: 0;
   padding: 0;
 }
+.background {
+
+}
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -129,8 +132,8 @@ hr {
   width: 100%;
   opacity: 0.9;
   margin-bottom: 1rem;
-  background: #dc3545;
-  color: #fff;
+  background: blue;
+  color: yellow;
 
   ul {
     display: flex;
