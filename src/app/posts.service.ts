@@ -5,7 +5,7 @@ export interface Post {
     title: string
     author?: string
     text: string
-    id?: string
+    id: string
 }
 
 @Injectable({providedIn: 'root'})
