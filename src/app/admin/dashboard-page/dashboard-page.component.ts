@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {PostsServices} from '../shared/posts.services';
+import {PostsAdServices} from '../shared/posts.admin.services';
 import {Post} from '../../posts.service';
 import {Subscription} from 'rxjs';
 
@@ -19,7 +19,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     diSub: Subscription
     searchStr: ''
 
-    constructor(private postService: PostsServices) {
+    constructor(private postService: PostsAdServices) {
     }
 
     ngOnInit() {
