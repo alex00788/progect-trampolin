@@ -28,7 +28,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
             this.posts = [];
             posts.forEach((element) => {
                 console.log('eto element', element);
-                this.posts.push({id: element.id, title: element.title, text: '', date: element.date});
+                this.posts.push({id: element.id, author: element.author, title: element.title, text: '', date: element.date});
             });
         });
     }

@@ -20,16 +20,16 @@ export class EditPageComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.route.params
-            .pipe(switchMap((params: Params) => {
-                    return this.postService.getById(params ['id']);
-                })
-            ).subscribe((post: Post) => {
-            this.form = new FormGroup({
-                title: new FormControl(post.title, Validators.required),
-                text: new FormControl(post.text, Validators.required)
-            });
-        });
+        // this.route.params
+        //     .pipe(switchMap((params: Params) => {
+        //             return this.postService.getById(params ['id']);
+        //         })
+        //     ).subscribe((post: Post) => {
+        //     this.form = new FormGroup({
+        //         title: new FormControl(post.title, Validators.required),
+        //         text: new FormControl(post.text, Validators.required)
+        //     });
+        // });
 
     }
 
