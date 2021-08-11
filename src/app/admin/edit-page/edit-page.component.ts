@@ -41,13 +41,13 @@ export class EditPageComponent implements OnInit {
             return
         }
         this.submitted = true
-        this.postService.update( {
-          ...this.post,
-          text: this.form.value.text,
-          title: this.form.value.title,
-      }).subscribe(() => {
-            this.submitted = false
-        })
+      //   this.postService.update( {
+      //     ...this.post,
+      //     text: this.form.value.text,
+      //     title: this.form.value.title,
+      // }).subscribe(() => {
+      //       this.submitted = false
+      //   })
     }
 }
 
