@@ -21,7 +21,7 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
     searchStr: ''
 
     constructor(
-        private alert: AlertService
+        private alert: AlertService,
         private postService: PostsAdServices
     ) {
     }

@@ -18,7 +18,7 @@ export class EditPageComponent implements OnInit {
     submitted = false
 
     constructor(
-        private alert: AlertService
+        private alert: AlertService,
         private route: ActivatedRoute,
         private postService: PostsAdServices
     ) {
@@ -49,7 +49,7 @@ export class EditPageComponent implements OnInit {
       //     title: this.form.value.title,
       // }).subscribe(() => {
       //       this.submitted = false
-    this.alert.success('пост обновлен')
+    // this.alert.success('пост обновлен')
       //   })
     }
 }
