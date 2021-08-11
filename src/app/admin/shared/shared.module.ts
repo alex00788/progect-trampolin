@@ -5,7 +5,7 @@ import {CommonModule} from '@angular/common';
 
 @NgModule({
     imports: [HttpClientModule, CommonModule],
-    exports: [HttpClientModule],
+    exports: [HttpClientModule, AlertComponent],
     declarations: [AlertComponent]
 })
 export class SharedModule {
