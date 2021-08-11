@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {AlertService} from '../../services/alert.service';
 
 @Component({
   selector: 'app-alert',
@@ -12,9 +13,18 @@ export class AlertComponent implements OnInit {
   public text: string
   public type = 'success'
 
-  constructor() { }
+  constructor(private alerService: AlertService) { }
 
   ngOnInit() {
+    this.alerService.alert$.subscribe(alert => {
+      this.text = alert.text
+      this.type = alert.type
+
+      const timeout = setTimeout(() => {
+        clearTimeout(timeout)
+        this.text = ''
+      }, this.dalay)
+    })
   }
 
 }
