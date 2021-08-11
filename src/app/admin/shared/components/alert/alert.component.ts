@@ -1,22 +1,25 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnDestroy, OnInit} from '@angular/core';
 import {AlertService} from '../../services/alert.service';
+import {Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-alert',
   templateUrl: './alert.component.html',
   styleUrls: ['./alert.component.scss']
 })
-export class AlertComponent implements OnInit {
+export class AlertComponent implements OnInit, OnDestroy {
 
   @Input() dalay = 5000
 
   public text: string
   public type = 'success'
 
+  aSub: Subscription
+
   constructor(private alerService: AlertService) { }
 
   ngOnInit() {
-    this.alerService.alert$.subscribe(alert => {
+    this.aSub = this.alerService.alert$.subscribe(alert => {
       this.text = alert.text
       this.type = alert.type
 
@@ -26,5 +29,9 @@ export class AlertComponent implements OnInit {
       }, this.dalay)
     })
   }
-
+  ngOnDestroy(): void {
+    if (this.aSub) {
+      this.aSub.unsubscribe()
+    }
+  }
 }
