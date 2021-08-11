@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
-import {NgModule, Provider} from '@angular/core';
+import {registerLocaleData} from '@angular/common';
+import ruLocale from '@angular/common/locales/ru';
 
+import {NgModule, Provider} from '@angular/core';
 import { AppComponent } from './app.component';
 import {FormsModule} from '@angular/forms';
 import { AboutExtraComponent } from './price-extra/about-extra.component';
@@ -13,6 +15,8 @@ import {ArrorComponent} from './arror/arror.component';
 import {SharedModule} from './admin/shared/shared.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from './admin/shared/auth.interceptor';
+
+registerLocaleData(ruLocale, 'ru')
 
 const INTERCEPTOR_PROVIDER: Provider = {
   provide: HTTP_INTERCEPTORS,
