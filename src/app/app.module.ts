@@ -15,6 +15,7 @@ import {ArrorComponent} from './arror/arror.component';
 import {SharedModule} from './admin/shared/shared.module';
 import {HTTP_INTERCEPTORS} from '@angular/common/http';
 import {AuthInterceptor} from './admin/shared/auth.interceptor';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 registerLocaleData(ruLocale, 'ru')
 
@@ -38,7 +39,8 @@ const INTERCEPTOR_PROVIDER: Provider = {
     BrowserModule,
     SharedModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [INTERCEPTOR_PROVIDER],
   bootstrap: [AppComponent]
