@@ -1,9 +1,16 @@
 import {Component} from '@angular/core';
+import {state, style, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-sky-selector-for-alex',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [
+      trigger('boxt', [
+          state('start', style({background: 'blue'})),
+          state ('end', style({background: 'red', transform: 'scale(1.5)'}))
+      ])
+  ]
 })
 
 export class AppComponent {
