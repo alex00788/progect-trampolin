@@ -14,7 +14,12 @@ import {state, style, trigger} from '@angular/animations';
 })
 
 export class AppComponent {
-    boxState = 'start'
+    boxState = 'end'
+
+    animate () {
+        this.boxState = this.boxState === 'end' ? 'start' : 'end'
+    }
+
  constructor() {
  }
 
