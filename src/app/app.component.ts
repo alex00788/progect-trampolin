@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {state, style, trigger} from '@angular/animations';
+import {animate, state, style, transition, trigger} from '@angular/animations';
 
 @Component({
   selector: 'app-sky-selector-for-alex',
@@ -7,17 +7,19 @@ import {state, style, trigger} from '@angular/animations';
   styleUrls: ['./app.component.scss'],
   animations: [
       trigger('box', [
-          state('Первое занятие бесплатно!', style({background: 'blue'})),
-          state ('Научим делать сальто на первом занятии', style({background: 'red'}))
+          state('start', style({background: 'blue'})),
+          state ('end', style({background: 'red', transform: 'scale(1.1)'})),
+          transition('start => end', animate(450)),
+          transition('end => start', animate(450))
       ])
   ]
 })
 
 export class AppComponent {
-    boxState = 'Первое занятие бесплатно!'
+    boxState = 'start'
 
     animate () {
-        this.boxState = this.boxState === 'Научим делать сальто на первом занятии' ? 'Первое занятие бесплатно!' : 'Научим делать сальто на первом занятии'
+        this.boxState = this.boxState === 'end' ? 'start' : 'end'
     }
 
  constructor() {
