@@ -8,19 +8,13 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
       trigger('box', [
           state('start', style({background: 'blue'})),
-          state ('end', style({
-              background: 'red',
-              transform: 'scale(1.1)'
-          })),
-          state ('special', style({
-              background: 'pink',
-              transform: 'scale(0.9)',
-              borderRadius: '70%'
-          })),
+          state ('end', style({background: 'red', transform: 'scale(1.1)'})),
+          state ('special', style({background: 'orange', transform: 'scale(0.9)',
+              borderRadius: '80%'})),
 
           transition('start => end', animate(450)),
-          transition('end => start', animate(450)),
-          transition('special <=> *', animate(450)),
+          transition('end => special', animate(450)),
+          transition('special => start', animate(500)),
       ])
   ]
 })
@@ -29,7 +23,13 @@ export class AppComponent {
     boxState = 'start'
 
     animate () {
-        this.boxState = this.boxState === 'end' ? 'start' : 'end'
+        if (this.boxState === 'start') {
+            this.boxState = 'end'
+        } else if (this.boxState === 'end') {
+            this.boxState = 'special'
+        } else if (this.boxState === 'special') {
+            this.boxState = 'start'
+        }
     }
 
  constructor() {
