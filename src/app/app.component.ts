@@ -7,30 +7,30 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   styleUrls: ['./app.component.scss'],
   animations: [
       trigger('box', [
-          state('start', style({background: 'blue'})),
+          state('pervoe', style({background: 'blue'})),
           state ('end', style({background: 'red', transform: 'scale(1.1)'})),
-          state ('special', style({background: 'orange', transform: 'scale(0.9)',
-              borderRadius: '80%'})),
+          state ('special', style({background: 'orange', transform: 'scale(0.9)'})),
 
-          transition('start => end', animate(450)),
+          transition('pervoe => end', animate(450)),
           transition('end => special', animate(450)),
-          transition('special => start', animate(500)),
+          transition('special => pervoe', animate(500)),
       ])
   ]
 })
 
 export class AppComponent {
-    boxState = 'start'
+    boxState = 'pervoe'
 
     animate () {
-        if (this.boxState === 'start') {
+        if (this.boxState === 'pervoe') {
             this.boxState = 'end'
         } else if (this.boxState === 'end') {
             this.boxState = 'special'
         } else if (this.boxState === 'special') {
-            this.boxState = 'start'
+            this.boxState = 'pervoe'
         }
     }
+
 
  constructor() {
  }

@@ -15,7 +15,6 @@
 
 <div class="wrap">
     <button (click)="animate()">нажми!</button>
-    <button (click)="boxState = 'special'"> нажми!!!</button>
 </div>
 
 
@@ -23,7 +22,7 @@
         class="box"
         [@box]="boxState"
 >
-    <h4>  {{boxState | uppercase}} </h4>
+     {{boxState | uppercase}}
 </div>
 
 <div class="container">
