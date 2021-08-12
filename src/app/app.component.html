@@ -1,20 +1,17 @@
-<div id="sect1" class="container">
-    <h2>добавить картинку на задний план</h2>
+<div class="wrap">
+      <button (click)="animate()">нажми!</button>
+      <button (click)="boxState = 'special'">нажми!!!</button>
 
-    <div class="wrap">
-        <button (click)="animate()">ggggggg</button>
+      <hr/>
 
-        <hr />
-
-        <div
-           class="box"
-           [@box]="boxState"
-        >
-            {{boxState | uppercase}}
-        </div>
+    <div
+       class="box"
+       [@box]="boxState"
+    >
+       <h4>  {{boxState | uppercase}} </h4>
     </div>
-
 </div>
+
 
 <nav class="navbar">
     <h1>

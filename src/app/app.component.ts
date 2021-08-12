@@ -8,9 +8,19 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   animations: [
       trigger('box', [
           state('start', style({background: 'blue'})),
-          state ('end', style({background: 'red', transform: 'scale(1.1)'})),
+          state ('end', style({
+              background: 'red',
+              transform: 'scale(1.1)'
+          })),
+          state ('special', style({
+              background: 'pink',
+              transform: 'scale(0.9)',
+              borderRadius: '70%'
+          })),
+
           transition('start => end', animate(450)),
-          transition('end => start', animate(450))
+          transition('end => start', animate(450)),
+          transition('special <=> *', animate(450)),
       ])
   ]
 })
