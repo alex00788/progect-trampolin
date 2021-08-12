@@ -6,7 +6,7 @@ import {state, style, trigger} from '@angular/animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   animations: [
-      trigger('boxt', [
+      trigger('box', [
           state('start', style({background: 'blue'})),
           state ('end', style({background: 'red', transform: 'scale(1.5)'}))
       ])
@@ -14,6 +14,7 @@ import {state, style, trigger} from '@angular/animations';
 })
 
 export class AppComponent {
+    boxState = 'start'
  constructor() {
  }
 

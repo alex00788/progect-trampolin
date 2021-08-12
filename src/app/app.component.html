@@ -1,9 +1,12 @@
-<div id="sect1"class="container">
+<div id="sect1" class="container">
     <h2>добавить картинку на задний план</h2>
 
-   <div class="wrapm">
-       <div class="boxm"></div>
-   </div>
+    <div class="wrap">
+        <div
+           class="box"
+           [@box]="boxState"
+        ></div>
+    </div>
 
 </div>
 
@@ -18,7 +21,7 @@
         <li routerLinkActive="active"><a routerLink="/posts">Почему выбирают нас</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/price']">Цены и акции</a></li>
         <li routerLinkActive="active"><a [routerLink]="['/admin']">Личный кабинет</a></li>
-  <!--  <li><button class="btn"></button></li>   так можно в списке кнопку сделать-->
+        <!--  <li><button class="btn"></button></li>   так можно в списке кнопку сделать-->
     </ul>
 </nav>
 
